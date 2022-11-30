@@ -57,6 +57,7 @@ $routes->add('/admin/updateClient/(:num)', 'Admin\Client::updateClient/$1');
 $routes->add('/admin/updateClientAction/(:num)', 'Admin\Client::updateClientAction/$1');
 
 $routes->add('/admin/deleteClient/(:num)', 'Admin\Client::deleteClient/$1');
+$routes->add('admin/searchClient', 'Admin\Client::searchClient');
 
 
 

@@ -66,4 +66,16 @@ class Client extends BaseController {
         $ClientModel -> delete($idClient);
     return redirect()->to(base_url('admin/listClients'));
 }
+
+    public function  searchClient(){
+        $ClientModel = new ClientModel();
+        $data =[
+            'arrayClients' => $ClientModel -> getClientsFor( $this -> request -> getVar('search'))
+        ];
+        echo view('admin/templates/header');
+        echo view('admin/client/listClients', $data);
+        echo view('admin/templates/footer');
+    }
+
+
 }
